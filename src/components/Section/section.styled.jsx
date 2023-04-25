@@ -6,6 +6,7 @@ export const Sections = styled.section`
   justify-items: center;
 `;
 export const Title = styled.h2`
+  padding-right: 50px;
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;

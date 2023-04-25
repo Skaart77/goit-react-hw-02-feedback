@@ -1,23 +1,15 @@
 import { ListButton, Button } from './feedbackOptions.styled';
 
-const FeedbackOptions = ({ goodFeedback, neutralFeedback, badFeedback }) => {
+const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
     <ListButton>
-      <li>
-        <Button type="button" onClick={goodFeedback}>
-          Good
-        </Button>
-      </li>
-      <li>
-        <Button type="button" onClick={neutralFeedback}>
-          Neutral
-        </Button>
-      </li>
-      <li>
-        <Button type="button" onClick={badFeedback}>
-          Bad
-        </Button>
-      </li>
+      {options.map(option => (
+        <li key={option}>
+          <Button type="button" name={option} onClick={onLeaveFeedback}>
+            {option}
+          </Button>
+        </li>
+      ))}
     </ListButton>
   );
 };
